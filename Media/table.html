@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table {
+            margin: auto;
+            width: 70%;
+            border-collapse: collapse;
+        }
+        caption {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+            text-transform: capitalize;
+        }
+        thead {
+            background-color: #f9f9f9;
+        }
+        th, td {
+            padding: 1em; ;
+            border: 1px solid #000;
+            text-transform: uppercase;
+            text-align: left;
+        }
+        th {
+            background-color: #f9f9f9;
+        }
+        thead th, tfoot td {
+            background-color: #f1f1f1;
+        }
+        
+    </style>
+</head>
+<body>
+   <table>
+    <caption>First semester examination</caption>
+    <!-- thead>tr>th*5 -->
+    <thead>
+        <tr>
+            <th scope="col">course</th>
+            <th scope="col">mth401</th>
+            <th scope="col">cosc412</th>
+            <th scope="col">mat411</th>
+            <th scope="col">phy415</th>
+        </tr>
+    </thead>
+    <!-- tbody>(tr>th+td*4)*3 -->
+    <tbody>
+        <tr>
+            <th scope="row">continuous assessment</th>
+            <td>20</td>
+            <td>12</td>
+            <td>9</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <th scope="row">examination scores</th>
+            <td>10</td>
+            <td>39</td>
+            <td>56</td>
+            <td>66</td>
+        </tr>
+        <tr>
+            <th scope="row">total</th>
+            <td>30</td>
+            <td>51</td>
+            <td>65</td>
+            <td>94</td>
+        </tr>
+    </tbody>
+    <!-- tfoot>tr>th>td*4 -->
+     <tfoot>
+        <tr>
+                <th scope="row">Grade</th>
+                <td>F</td>
+                <td>C</td>
+                <td>B</td>
+                <td>A</td>
+        </tr>
+        <tr>
+            <th scope="row" rowspan="2">average</th>
+            <td colspan="4">56</td>
+        </tr>
+        <tr>
+            <th scope="row" colspan="2">position</th>
+            <td colspan="3">2nd</td>
+        </tr>
+     </tfoot>
+   </table> 
+</body>
+</html>
